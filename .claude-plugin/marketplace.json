@@ -1,0 +1,17 @@
+{
+  "name": "alteredcraft-plugins",
+  "owner": {
+    "name": "AlteredCraft"
+  },
+  "metadata": {
+    "description": "A collection of Claude Code plugins for artifact-driven development workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "artifact-workflow",
+      "source": "./",
+      "description": "Artifact-driven development workflow inspired by Google Antigravity. Produces task lists, implementation plans, and walkthroughs to keep you engaged during AI-assisted development."
+    }
+  ]
+}
