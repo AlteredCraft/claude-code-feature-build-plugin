@@ -1,6 +1,6 @@
 ---
 description: Initiate artifact-driven development workflow
-allowed-tools: Skill(implementation-plan-creator), Skill(task-list-creator), Skill(walkthrough-creator), Skill(adr-manager), WebSearch
+allowed-tools: Skill(artifact-workflow:implementation-plan-creator), Skill(artifact-workflow:task-list-creator), Skill(artifact-workflow:walkthrough-creator), Skill(artifact-workflow:adr-manager), WebSearch, Bash(mkdir:.artifacts)
 ---
 
 You are executing an artifact-driven development workflow inspired by Google's Antigravity. This workflow produces three living artifacts that scope work and track progress.
@@ -109,19 +109,44 @@ Work through tasks sequentially:
 1. Update `todo.md` checkboxes as tasks complete
 2. Update `walkthrough.md` with what was built (invoke `walkthrough-creator` skill)
 3. **Write formal test files** for each testable component (see Testing Requirements below)
-4. **Update `.artifacts/ADR.md`** when making significant architectural decisions (invoke `adr-manager` skill)
 
 If you encounter blockers or ambiguity, **stop and ask the user** rather than making assumptions.
 
+## Phase 3.5: ADR Review Gate
+
+**CRITICAL:** Before marking the build complete, systematically review for architectural decisions that should be documented.
+
+When all implementation tasks are complete BUT BEFORE updating walkthrough to `status: complete`:
+
+1. **Read the completed artifacts** to understand what was built:
+   - Read `.artifacts/bld-<project-slug>/implementation-plan.md` — What was planned?
+   - Read `.artifacts/bld-<project-slug>/walkthrough.md` — What was actually built?
+   - Read `.artifacts/ADR.md` — What decisions have already been recorded?
+
+2. **Review for architectural decisions** — Compare what was planned vs what was built and identify any significant architectural decisions made during implementation. Refer to the `adr-manager` skill for detailed criteria and examples of what qualifies.
+
+3. **Determine if ADR entries are needed:**
+   - **If YES** — Architectural decisions with lasting impact were made:
+     - Identify 1-3 key decisions (avoid over-documenting minor choices)
+     - For each decision, invoke the `adr-manager` skill with appropriate details
+     - Always include context link: `**Build:** [bld-<project-slug>](./.artifacts/bld-<project-slug>/)`
+
+   - **If NO** — No significant architectural decisions (routine implementation):
+     - Proceed to Phase 4 without adding ADR entries
+     - This is common for straightforward feature additions
+
+Once ADR review is complete, proceed to Phase 4.
+
 ## Phase 4: Completion
 
-When all tasks are complete:
+After completing Phase 3.5 ADR Review Gate:
 
-1. Update `walkthrough.md` status to `complete`
+1. Update `walkthrough.md` status to `complete` (invoke `walkthrough-creator` skill)
 2. **STOP** — Present the full contents of `walkthrough.md` to the user
 3. Summarize: "The build is complete. Here's what was accomplished:"
 4. Include instructions for running tests
-5. This is the terminus of the workflow
+5. If ADR entries were added, mention them: "Architectural decisions have been recorded in `.artifacts/ADR.md`"
+6. This is the terminus of the workflow
 
 ## Testing Requirements
 
@@ -150,4 +175,5 @@ Tests must be **persisted as actual test files**, not just ad-hoc verification.
 - **Approval gates are mandatory** — STOP and wait for explicit user confirmation between phases
 - **Log as you go** — The walkthrough builds incrementally, not as a summary at the end
 - **Tests must persist** — Create runnable test files, not just ad-hoc verification
-- **Capture the "why"** — Record architectural decisions in ADR.md for future reference
+- **Capture the "why"** — Record architectural decisions as they happen (Phase 3) and systematically review before completion (Phase 3.5)
+- **ADR review is not optional** — Every build must go through Phase 3.5 ADR review before presenting results to the user.

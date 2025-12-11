@@ -1,6 +1,6 @@
 ---
 name: adr-manager
-description: Add Architecture Decision Record (ADR) entries to an ADR file. This skill should be used when recording significant architectural decisions during development. It handles formatting and appending entries using Michael Nygard's ADR template. The skill operates in the caller's context and uses the ADR file path and any relevant context links from the conversation.
+description: Add Architecture Decision Record (ADR) entries to an ADR file. This skill should be used when recording significant architectural decisions during development. It handles formatting and appending entries using Michael Nygard's ADR template.
 ---
 
 # ADR Manager
@@ -15,12 +15,14 @@ Based on [Michael Nygard's ADR template](http://thinkrelevance.com/blog/2011/11/
 
 Read the existing ADR file to determine the next sequential number, then append a new entry.
 
+ALWAYS include a context link: `**Build:** [bld-<project-slug>](./.artifacts/bld-<project-slug>/)`
+
 ### Entry Format
 
 ```markdown
 ## ADR-<NNN>: <Title>
 
-<context-link if provided>
+<context-link>
 
 ### Status
 
@@ -64,6 +66,18 @@ Do NOT add entries for:
 - Routine implementation details
 - Minor code organization choices
 - Decisions that are easily reversible with no significant impact
+
+### Example Scenarios
+
+✅ **Add ADR:** "Chose Next.js App Router over Pages Router for better streaming support"
+✅ **Add ADR:** "Adopted Zustand for state management due to simplicity vs Redux complexity"
+✅ **Add ADR:** "Implemented optimistic UI updates to improve perceived performance despite network latency"
+✅ **Add ADR:** "Selected PostgreSQL over MongoDB for ACID guarantees in financial transactions"
+
+❌ **Skip ADR:** Used standard file structure conventions
+❌ **Skip ADR:** Followed existing error handling patterns
+❌ **Skip ADR:** Wrote unit tests using the project's existing test framework
+❌ **Skip ADR:** Applied consistent naming conventions across components
 
 ### Quality Guidelines
 
