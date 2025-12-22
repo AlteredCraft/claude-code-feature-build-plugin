@@ -6,6 +6,15 @@ An artifact-driven development workflow for Claude Code, inspired by Google Anti
 
 This plugin adds a `/artifact-workflow:build` command that guides you through a structured development workflow:
 
+```mermaid
+graph TD
+    Start[/artifact-workflow:build/] --> Interrogation[1. Interrogation<br/>Clarify Requirements]
+    Interrogation --> TaskList[2. Task List<br/>Create todo.md]
+    TaskList --> Plan[3. Implementation Plan<br/>Create implementation-plan.md]
+    Plan --> Execution[4. Execution<br/>Implement & Verify]
+    Execution --> Walkthrough[5. Walkthrough<br/>Create walkthrough.md]
+```
+
 1. **Interrogation** — Claude asks clarifying questions until it has enough context
 2. **Task List** — Creates `todo.md` breaking down the work into phases
 3. **Implementation Plan** — Creates `implementation-plan.md` detailing the technical approach
