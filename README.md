@@ -29,6 +29,19 @@ An artifact-driven development workflow inspired by Google Antigravity. Adds a `
 /artifact-workflow:build --help
 ```
 
+### [dev-consultant](./plugins/dev-consultant/)
+
+A structured product consultation workflow that helps refine project ideas into fully-formed design specifications through strategic questioning and iterative refinement.
+
+```bash
+/plugin install dev-consultant@alteredcraft-plugins
+```
+
+**❗ Restart claude**
+```bash
+/dev-consultant:brainstorm <your project idea>
+```
+
 ## License
 
 MIT
