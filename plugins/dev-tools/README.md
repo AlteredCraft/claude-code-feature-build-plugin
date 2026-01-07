@@ -1,23 +1,23 @@
-# Dev Journal Plugin
+# Dev Tools Plugin
 
-A development journaling skill that helps developers reflect on and document their work using Claude Code activity data.
-
-## Overview
-
-The dev-journal skill synthesizes your Claude Code session data into meaningful journal entries. It focuses on what **you** accomplished—your decisions, achievements, and learning—rather than an audit trail of AI actions.
+Developer tools plugin with skills for journaling and productivity.
 
 ## Installation
 
 ```bash
-claude plugin install alteredcraft-plugins/dev-journal
+claude plugin install alteredcraft-plugins/dev-tools
 ```
 
-## Usage
+## Skills
 
-The skill is invoked via the `Skill()` tool:
+### journal
+
+A development journaling skill that helps developers reflect on and document their work using Claude Code activity data.
+
+**Usage:**
 
 ```
-Skill(dev-journal:dev-journal)
+Skill(dev-tools:journal)
 ```
 
 When triggered, the skill will:
@@ -27,16 +27,14 @@ When triggered, the skill will:
 3. Synthesize a narrative journal entry
 4. Offer to refine until you're satisfied
 
-## Features
+**Features:**
 
 - **User-centric narratives**: Captures what you accomplished, not AI actions
 - **Selective highlighting**: Gauges significance to highlight meaningful work
 - **Multi-day summaries**: Provides highlights and day-by-day breakdowns
 - **Iterative refinement**: Always offers to revise before finalizing
 
-## Data Sources
-
-The skill reads from several Claude Code data stores:
+**Data Sources:**
 
 - `~/.claude/history.jsonl` - Activity timeline
 - `~/.claude/projects/` - Session transcripts
@@ -44,9 +42,9 @@ The skill reads from several Claude Code data stores:
 - `~/.claude/todos/` - Task completion status
 - `~/.claude/stats-cache.json` - Usage metrics
 
-See `skills/dev-journal/references/claude-code-directory.md` for detailed documentation of these data structures.
+See `skills/journal/references/claude-code-directory.md` for detailed documentation of these data structures.
 
-## Example Output
+**Example Output:**
 
 ```markdown
 ## Dev Journal: January 3, 2026

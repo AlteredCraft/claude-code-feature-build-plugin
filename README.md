@@ -42,6 +42,19 @@ A structured product consultation workflow that helps refine project ideas into 
 /dev-consultant:brainstorm <your project idea>
 ```
 
+### [dev-tools](./plugins/dev-tools/)
+
+Developer tools with skills for journaling and productivity. Includes a `journal` skill that synthesizes Claude Code activity data into meaningful journal entries.
+
+```bash
+/plugin install dev-tools@alteredcraft-plugins
+```
+
+**❗ Restart claude**
+```
+Skill(dev-tools:journal)
+```
+
 ## License
 
 MIT

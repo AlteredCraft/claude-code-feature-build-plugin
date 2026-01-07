@@ -1,5 +1,5 @@
 ---
-name: dev-journal
+name: journal
 description: An agent to journal developer activity over a specified time period.
 ---
 

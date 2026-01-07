@@ -19,9 +19,9 @@
       "description": "Dev consultant plugin for AI-assisted development workflows. Ensure the agent understands the scope and context of your development project."
     },
     {
-      "name": "dev-journal",
-      "source": "./plugins/dev-journal",
-      "description": "Development journaling skill that helps developers reflect on and document their work using Claude Code activity data."
+      "name": "dev-tools",
+      "source": "./plugins/dev-tools",
+      "description": "Developer tools plugin with skills for journaling and productivity."
     }
   ]
 }

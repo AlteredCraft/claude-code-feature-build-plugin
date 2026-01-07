@@ -1,7 +1,7 @@
 {
-  "name": "dev-journal",
+  "name": "dev-tools",
   "version": "1.0.0",
-  "description": "Development journaling skill that helps developers reflect on and document their work using Claude Code activity data.",
+  "description": "Developer tools plugin with skills for journaling and productivity.",
   "author": {
     "name": "AlteredCraft"
   },
