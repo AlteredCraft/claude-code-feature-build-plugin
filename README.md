@@ -18,6 +18,7 @@ These plugins are developed by [AlteredCraft](https://alteredcraft.com), a publi
 ```
 **Note**: You can also browse and install plugins directly in the Claude Code UI using the `/plugin` command.
 
+![alt text](docs/img/cc-mp-browse.png)
 
 
 For more details, see the [Claude Code Plugins documentation](https://code.claude.com/docs/en/plugins).
