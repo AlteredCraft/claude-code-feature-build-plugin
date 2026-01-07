@@ -1,10 +1,10 @@
-# Dev Consultant
+# Ideation
 
 A structured product consultation workflow for Claude Code that helps refine project ideas into fully-formed design specifications.
 
 ## What It Does
 
-This plugin adds a `/dev-consultant:brainstorm` command that guides you through a three-phase consultation process:
+This plugin adds a `/ac-ideation:dev-product-brainstorm` command that guides you through a three-phase consultation process:
 
 1. **Idea Refinement** — Strategic questioning to understand purpose, scope, requirements, constraints, and success criteria
 2. **Design Presentation** — Section-by-section design specification with iterative feedback
@@ -28,7 +28,7 @@ Ideas are messy. Jumping straight to implementation often means building the wro
 /plugin marketplace add AlteredCraft/claude-code-plugins
 
 # Install the plugin
-/plugin install dev-consultant@alteredcraft-plugins
+/plugin install ac-ideation@alteredcraft-plugins
 ```
 
 ### Manual Installation
@@ -41,7 +41,7 @@ cd claude-code-plugins
 
 # In Claude Code:
 /plugin marketplace add ./
-/plugin install dev-consultant@alteredcraft-plugins
+/plugin install ac-ideation@alteredcraft-plugins
 ```
 
 ## Usage
@@ -49,13 +49,13 @@ cd claude-code-plugins
 ### Start a consultation
 
 ```bash
-/dev-consultant:brainstorm
+/ac-ideation:dev-product-brainstorm
 ```
 
 Or with an initial idea:
 
 ```bash
-/dev-consultant:brainstorm Build a CLI tool for managing dotfiles across machines
+/ac-ideation:dev-product-brainstorm Build a CLI tool for managing dotfiles across machines
 ```
 
 ### The process

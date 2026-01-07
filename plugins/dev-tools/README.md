@@ -5,7 +5,7 @@ Developer tools plugin with skills for journaling and productivity.
 ## Installation
 
 ```bash
-claude plugin install alteredcraft-plugins/dev-tools
+/plugin install ac-dev-tools@alteredcraft-plugins
 ```
 
 ## Skills
@@ -17,7 +17,7 @@ A development journaling skill that helps developers reflect on and document the
 **Usage:**
 
 ```
-Skill(dev-tools:journal)
+Skill(ac-dev-tools:journal)
 ```
 
 When triggered, the skill will:

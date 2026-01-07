@@ -541,7 +541,7 @@ plugins/
 {
   "version": 2,
   "plugins": {
-    "artifact-workflow@alteredcraft-plugins": [
+    "ac-artifact-workflow@alteredcraft-plugins": [
       {
         "scope": "user",
         "installPath": "/Users/sam/.claude/plugins/cache/...",
@@ -580,7 +580,7 @@ plugins/
   },
   "statusLine": { "type": "command", "command": "..." },
   "enabledPlugins": {
-    "artifact-workflow@alteredcraft-plugins": true
+    "ac-artifact-workflow@alteredcraft-plugins": true
   },
   "alwaysThinkingEnabled": true
 }

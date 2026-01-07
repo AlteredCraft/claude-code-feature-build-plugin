@@ -1,6 +1,6 @@
 ---
 description: Initiate artifact-driven development workflow
-allowed-tools: Skill(artifact-workflow:implementation-plan-creator), Skill(artifact-workflow:task-list-creator), Skill(artifact-workflow:walkthrough-creator), Skill(artifact-workflow:adr-manager), WebSearch, Bash(mkdir:.artifacts)
+allowed-tools: Skill(ac-artifact-workflow:implementation-plan-creator), Skill(ac-artifact-workflow:task-list-creator), Skill(ac-artifact-workflow:walkthrough-creator), Skill(ac-artifact-workflow:adr-manager), WebSearch, Bash(mkdir:.artifacts)
 ---
 
 You are executing an artifact-driven development workflow inspired by Google's Antigravity. This workflow produces three living artifacts that scope work and track progress.

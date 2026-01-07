@@ -4,11 +4,11 @@ An artifact-driven development workflow for Claude Code, inspired by Google Anti
 
 ## What It Does
 
-This plugin adds a `/artifact-workflow:build` command that guides you through a structured development workflow:
+This plugin adds a `/ac-artifact-workflow:build` command that guides you through a structured development workflow:
 
 ```mermaid
 graph TD
-    Start[/artifact-workflow:build/] --> Interrogation[1. Interrogation<br/>Clarify Requirements]
+    Start[/ac-artifact-workflow:build/] --> Interrogation[1. Interrogation<br/>Clarify Requirements]
     Interrogation --> TaskList[2. Task List<br/>Create todo.md]
     TaskList --> Plan[3. Implementation Plan<br/>Create implementation-plan.md]
     Plan --> Execution[4. Execution<br/>Implement & Verify]
@@ -40,7 +40,7 @@ Coding agents are capable, but disengagement leads to drift. Without checkpoints
 /plugin marketplace add AlteredCraft/claude-code-plugins
 
 # Install the plugin
-/plugin install artifact-workflow@alteredcraft-plugins
+/plugin install ac-artifact-workflow@alteredcraft-plugins
 ```
 
 ### Manual Installation
@@ -53,7 +53,7 @@ cd claude-code-plugins
 
 # In Claude Code:
 /plugin marketplace add ./
-/plugin install artifact-workflow@alteredcraft-plugins
+/plugin install ac-artifact-workflow@alteredcraft-plugins
 ```
 
 For more details on plugin installation and troubleshooting, see the [Claude Code Plugins documentation](https://code.claude.com/docs/en/plugins).
@@ -63,18 +63,18 @@ For more details on plugin installation and troubleshooting, see the [Claude Cod
 ### Start a new build
 
 ```bash
-/artifact-workflow:build
+/ac-artifact-workflow:build
 ```
 
 Or with an initial description:
 
 ```bash
-/artifact-workflow:build Add user authentication with OAuth support
+/ac-artifact-workflow:build Add user authentication with OAuth support
 ```
 
 ### Resume an existing build
 
-If you have existing builds, `/artifact-workflow:build` will detect them and ask if you want to continue one or start fresh:
+If you have existing builds, `/ac-artifact-workflow:build` will detect them and ask if you want to continue one or start fresh:
 
 ```
 I found these existing builds:
