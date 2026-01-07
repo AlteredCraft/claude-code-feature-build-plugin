@@ -1,0 +1,16 @@
+{
+  "name": "dev-journal",
+  "version": "1.0.0",
+  "description": "Development journaling skill that helps developers reflect on and document their work using Claude Code activity data.",
+  "author": {
+    "name": "AlteredCraft"
+  },
+  "repository": "https://github.com/AlteredCraft/claude-code-plugins",
+  "license": "MIT",
+  "keywords": [
+    "journaling",
+    "productivity",
+    "reflection",
+    "documentation"
+  ]
+}
