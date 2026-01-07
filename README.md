@@ -61,8 +61,9 @@ Developer tools with skills for journaling and productivity. Includes a `journal
 
 **❗ Restart claude**
 ```
-Skill(ac-dev-tools:journal)
+I want to journal the work I did today
 ```
+Claude should invoke the journal Skill, but as with all skills you may need to give a nudge to Claude Code: _Use the dev journal skill to journal the work I did today_
 
 ## License
 
